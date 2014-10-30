@@ -7,10 +7,6 @@ class ApplicationController < ActionController::Base
     dashboard_path
   end
 
-  def after_update_path_for(resource)
-    dashboard_path
-  end
-
   def after_sign_out_path_for(resource)
     root_path
   end
