@@ -1,0 +1,11 @@
+<div id="photos">
+  <%= render @photos %>
+</div>
+
+
+<%= form_for Photo.new, :html => {:multipart => true} do |f| %>
+    <%= f.file_field :image %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
