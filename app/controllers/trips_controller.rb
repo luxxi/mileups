@@ -1,7 +1,8 @@
 class TripsController < ApplicationController
 
   def dashboard
-    @trips ||= current_user.trips
+    #@trips ||= current_user.trips
+    @trips = Trip.all
   end
 
   def new
