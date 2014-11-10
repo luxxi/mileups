@@ -13,6 +13,12 @@ gem 'less-rails'
 
 gem 'twitter-bootstrap-rails'
 
+gem 'fog'
+gem 'carrierwave'
+#gem 'rmagick'
+
+gem 'figaro'
+
 gem 'uglifier', '>= 1.3.0'
 
 gem 'coffee-rails', '~> 4.0.0'
@@ -20,6 +26,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 
 gem 'jquery-rails'
+gem 'jquery-fileupload-rails'
 
 gem 'turbolinks'
 
@@ -36,4 +43,6 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'rename'
 
