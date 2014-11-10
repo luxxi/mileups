@@ -1,0 +1,5 @@
+<% @trips.each do |trip| %>
+    <%= trip.title %><br>
+<% end %>
+
+<%= link_to 'New trip', new_trip_path %>
