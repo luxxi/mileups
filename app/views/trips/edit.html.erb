@@ -1,35 +1,12 @@
-<%= form_for @trip, :html => {:multipart => true} do |f| %>
-    <% if @trip.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
+<h1><%= @trip.title %></h1>
 
-          <ul>
-            <% @trip.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :title %><br>
-      <%= f.text_field :title %>
-    </div>
-
+<%= form_for Photo.new, :url => trip_upload_photos_path(@trip), :html => {:multipart => true}, id: 'new_photo' do |f| %>
+    <%= f.file_field :image, multiple: true, name: 'photo[image]' %>
 <% end %>
 
-<div id="photos">
-  <%= @trip.photos.each do |photo| %>
-      <%= image_tag photo.image, :style => "height:200px;" if photo.image? %>
-  <% end %>
-</div>
-
-<%= form_for Photo.new, :html => {:multipart => true, :id => 'new_photo'} do |f|%>
-    Upload photos: <%= f.file_field :image %>
-    <%= f.hidden_field :trip_id, :value => @trip.id %>
-<%end%>
 
 <%= link_to 'Done', dashboard_path %>
+
 
 <script id="template-upload" type="text/x-tmpl">
 <div class="upload">
