@@ -28,6 +28,10 @@ class TripsController < ApplicationController
     @photo = @trip.photos.create(photo_params)
   end
 
+  def show
+    @trip = Trip.find(params[:id])
+  end
+
   private
   def trip_params
     params.require(:trip).permit(:title, :user_id, :photos_attributes => [:trip_id, :image])
