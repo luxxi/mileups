@@ -1,5 +1,5 @@
 class TripsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :show
 
   def dashboard
     @trips = current_user.trips
@@ -30,6 +30,7 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find(params[:id])
+    render layout: display_layout
   end
 
   private
@@ -39,6 +40,10 @@ class TripsController < ApplicationController
 
   def photo_params
     params.require(:photo).permit(:image, :trip_id)
+  end
+
+  def display_layout
+    user_signed_in? ? 'application' : 'public'
   end
 
 end
