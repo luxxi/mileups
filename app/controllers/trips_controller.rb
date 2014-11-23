@@ -12,24 +12,24 @@ class TripsController < ApplicationController
   def create
     @trip = current_user.trips.create(trip_params)
     if @trip.save
-      redirect_to edit_trip_path(@trip), :notice => 'Ok!'
+      redirect_to trip_edit_path(current_user, @trip), :notice => 'Ok!'
     else
       render :action => 'new'
     end
   end
 
   def edit
-    @trip = Trip.find(params[:id])
+    @trip = Trip.find_by_param(params[:id])
     @photos = @trip.photos
   end
 
   def upload_photos
-    @trip = Trip.find(params[:trip_id])
+    @trip = Trip.find_by_param(params[:format])
     @photo = @trip.photos.create(photo_params)
   end
 
   def show
-    @trip = Trip.find(params[:id])
+    @trip = Trip.find_by_param(params[:id])
     render layout: display_layout
   end
 
