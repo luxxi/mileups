@@ -14,7 +14,6 @@
  *= require_self
  */
 
-/* custom template */
 html, body {
     height: 100%;
     font-family:verdana,arial,sans-serif;
@@ -68,34 +67,12 @@ hr {
     padding: 20px;
 }
 
-.full{
-    padding-top:70px;
+.full {
+    padding-top:30px;
 }
 
 .divider {
     margin-top:32px;
-}
-
-.navbar-blue {
-    border-width:0;
-    background-color:#FF8C00;
-    color:#ffffff;
-    font-family:arial,sans-serif;
-    top:0;
-    position:fixed;
-    width:100%;
-}
-
-.navbar-blue li > a,.navbar-toggle  {
-    color:#efefef;
-}
-
-.navbar-blue .dropdown-menu li a {color:#2A4888;}
-.navbar-blue .dropdown-menu li > a {padding-left:30px;}
-
-.navbar-blue li>a:hover, .navbar-blue li>a:focus, .navbar-blue .open, .navbar-blue .open>a, .navbar-blue .open>a:hover, .navbar-blue .open>a:focus {
-    background-color:#2A4888;
-    color:#fff;
 }
 
 #main {
@@ -124,23 +101,7 @@ hr {
     background-color:#393939;
 }
 
-.logo {
-    display:block;
-    padding:3px;
-    background-color:#fff;
-    color:#FF8C00;
-    height:28px;
-    width:28px;
-    margin:9px;
-    margin-right:2px;
-    margin-left:15px;
-    font-size:20px;
-    font-weight:700;
-    text-align:center;
-    text-decoration:none;
-    text-shadow:0 0 1px;
-    border-radius:2px;
-}
+
 #sidebar-footer {
     background-color:#444;
     position:absolute;
@@ -151,7 +112,6 @@ hr {
     margin-bottom:20px;
 }
 
-/* bootstrap overrides */
 
 h1,h2,h3 {
     font-weight:800;
@@ -182,14 +142,6 @@ h1,h2,h3 {
     resize: none;
 }
 
-.badge{
-    color:#FF8C00;
-    background-color:#fff;
-}
-.badge:hover, .badge-inverse{
-    background-color:#FF8C00;
-    color:#fff;
-}
 
 .jumbotron {
     background-color:transparent;
@@ -295,14 +247,13 @@ small.text-muted {
     /*height: 100px;*/
 }
 
-
-
 .carousel-inner > .item > img {
     margin: 0 auto;
 }
 
+/* Navigation bar. */
 
-/*Get rid of padding...*/
+/*Get rid of bootstraps padding...*/
 .navbar-nav > li > a {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -313,21 +264,68 @@ small.text-muted {
     padding-bottom: 15px;
 }
 
-/*overwritten*/
+/* Override bootstrapes colors */
 .navbar-default {
-    background-color: #745a00; /* fallback color, place your own */
-
-
-    /* Gradients for modern browsers, replace as you see fit */
-    background-image: -moz-linear-gradient(top, #745a00, #745a00);
-    background-image: -ms-linear-gradient(top, #745a00, #745a00);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#745a00), to(#745a00));
-    background-image: -webkit-linear-gradient(top, #745a00, #745a00);
-    background-image: -o-linear-gradient(top, #745a00, #745a00);
-    background-image: linear-gradient(top, #745a00, #745a00);
-    background-repeat: repeat-x;
-
-    /* IE8-9 gradient filter */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#745a00', endColorstr='#745a00', GradientType=0);
+  background-color: #FF8C00;
 }
 
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #3071a9;;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-text {
+  color: #c5c5c5;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #333333;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #555555;
+  background-color: #000005;
+}
+
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+/* Logo. */
+.navbar-default .navbar-brand {
+  color: #b2b2b2;
+  display:block;
+  padding:3px;
+  /*background-color: #6d3900;*/
+  color: #ffffff;
+  height:28px;
+  width:110px;
+  margin:9px;
+  margin-right:2px;
+  margin-left:15px;
+  font-size:23px;
+  font-weight:700;
+  text-align:center;
+  text-decoration:none;
+  text-shadow:0 0 1px;
+  border-radius:2px;
+}
+
+.badge{
+  color:#c98620;
+  background-color:#fff;
+}
+.badge:hover, .badge-inverse{
+  background-color:#ecbc00;
+  color:#fff;
+}

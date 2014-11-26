@@ -1,101 +1,7 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<div class="wrapper">
+<div>
+<div class="column" id="main">
 
-<div>Deployment test via codeship</div>
-
-
-<% if !user_signed_in?%>
-    <h2>Sign up</h2>
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
-
-        <div><%= f.label :email %><br />
-          <%= f.email_field :email %></div>
-
-        <div><%= f.label :password %><br />
-          <%= f.password_field :password %></div>
-
-
-        <div><%= f.submit "Sign up" %></div>
-    <% end %>
-
-    <%= link_to 'Login', new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-  </ul>
-</div>
-
-<div class="alert alert-warning alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-  <strong>Warning!</strong> Better check yourself, you're not looking too good.
-</div>
-
-
-<i class="fa fa-camera-retro fa-lg"></i> fa-lg
-<i class="fa fa-camera-retro fa-2x"></i> fa-2x
-<i class="fa fa-camera-retro fa-3x"></i> fa-3x
-<i class="fa fa-camera-retro fa-4x"></i> fa-4x
-<i class="fa fa-camera-retro fa-5x"></i> fa-5x
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
- <br>
-<br>
-<br>
-
-
-<div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-primary active">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
-  </label>
-</div>
-
-
-
-<br>
-<br>
-<br>
-<br>
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -107,18 +13,23 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="http://lorempixel.com/1920/500/nature/1/" alt="...">
+      <img src="http://lorempixel.com/1920/500/nature/2/" alt="...">
       <div class="carousel-caption">
-        ...
+       taken by John Legend
       </div>
     </div>
     <div class="item">
-      <img src="http://lorempixel.com/1920/500/nature/2/" alt="...">
+      <img src="http://lorempixel.com/1920/500/nature/3/" alt="...">
       <div class="carousel-caption">
-        ...
+        taken by Miley Riley
       </div>
     </div>
-    ...
+    <div class="item">
+      <img src="http://lorempixel.com/1920/500/nature/4/" alt="...">
+      <div class="carousel-caption">
+        taken by John Bon
+      </div>
+    </div>
   </div>
 
   <!-- Controls -->
@@ -130,4 +41,153 @@
     <i class="fa fa-chevron-right fa-2x"></i>
     <span class="sr-only">Next</span>
   </a>
+</div>
+
+<div class="padding">
+  <div class="full col-sm-9">
+
+    <!-- content -->
+    <div class="row">
+
+      <!-- main col left -->
+      <div class="col-sm-5">
+
+        <div class="panel panel-default">
+          <div class="panel-thumbnail"><img src="http://as1.wdpromedia.com/media/abd/north-america/alaska-vacations/denali-national-park.jpg" class="img-responsive"></div>
+          <div class="panel-body">
+            <p class="lead">Alaska</p>
+            <p>45 Followers, 13 Posts</p>
+
+            <p>
+              <img src="http://as1.wdpromedia.com/media/abd/north-america/alaska-vacations/denali-national-park.jpg" width="28px" height="28px">
+            </p>
+          </div>
+        </div>
+
+        <div class="well">
+          <form class="form-horizontal" role="form">
+            <h4>What's New</h4>
+            <div class="form-group" style="padding:14px;">
+              <textarea class="form-control" placeholder="Update your status"></textarea>
+            </div>
+            <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
+          </form>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Search by category</h4></div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">Country</li>
+              <li class="list-group-item">Continent</li>
+              <li class="list-group-item">Season</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4>How to get involved?</h4></div>
+          <div class="panel-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum odio odio, ut convallis tellus aliquam quis. Quisque tempus, ex ac tristique interdum, leo metus egestas sem, ut varius nisi dui iaculis tortor. Sed erat arcu, pretium at dignissim quis, aliquet a dui. Nulla et elit fermentum, pellentesque massa ut, ultrices lacus. Nullam maximus lorem sit amet lectus sollicitudin, eget tincidunt dolor rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ac placerat quam, quis sagittis diam. Aenean facilisis rutrum ex, ac scelerisque leo elementum sed. Sed blandit id diam at efficitur.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- main col right -->
+      <div class="col-sm-7">
+
+        <div class="well">
+
+          <% if !user_signed_in?%>
+              <h2>Sign up</h2>
+              <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+                  <%= devise_error_messages! %>
+
+                  <div><%= f.label :email %><br />
+                    <%= f.email_field :email %></div>
+
+                  <div><%= f.label :password %><br />
+                    <%= f.password_field :password %></div>
+
+
+                  <div><%= f.submit "Sign up" %></div>
+              <% end %>
+
+              <%= link_to 'Login', new_user_session_path, :class => 'navbar-link'  %>
+          <% end %>
+
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><a href="#" class="pull-right">Learn more</a> <h4>What's it all about?</h4></div>
+          <div class="panel-body">
+            <p><img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">The goal</a></p>
+            <div class="clearfix"></div>
+            <hr>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum odio odio, ut convallis tellus aliquam quis. Quisque tempus, ex ac tristique interdum, leo metus egestas sem, ut varius nisi dui iaculis tortor. Sed erat arcu, pretium at dignissim quis, aliquet a dui. Nulla et elit fermentum, pellentesque massa ut, ultrices lacus. Nullam maximus lorem sit amet lectus sollicitudin, eget tincidunt dolor rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ac placerat quam, quis sagittis diam. Aenean facilisis rutrum ex, ac scelerisque leo elementum sed. Sed blandit id diam at efficitur.
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-thumbnail"><img src="http://as1.wdpromedia.com/media/abd/north-america/alaska-vacations/denali-national-park.jpg" class="img-responsive"></div>
+          <div class="panel-body">
+            <p class="lead">Social</p>
+            <p>1,200 Followers, 83 Posts</p>
+
+            <p>
+              <img src="http://as1.wdpromedia.com/media/abd/north-america/alaska-vacations/denali-national-park.jpg" width="28px" height="28px">
+              <img src="http://as1.wdpromedia.com/media/abd/north-america/alaska-vacations/denali-national-park.jpg" width="28px" height="28px">
+              <img src="http://as1.wdpromedia.com/media/abd/north-america/alaska-vacations/denali-national-park.jpg" width="28px" height="28px">
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div><!--/row-->
+
+    <hr>
+    <div class="row" id="footer">
+      <div class="col-sm-6">
+        <a href="#">Twitter</a> <small class="text-muted">|</small> <a href="#">Facebook</a> <small class="text-muted">|</small> <a href="#">Google+</a>
+      </div>
+      <div class="col-sm-6">
+        <p>
+          <a href="#" class="pull-right">©Copyright 2014</a>
+        </p>
+      </div>
+    </div>
+    <hr>
+
+  </div><!-- /col-9 -->
+</div><!-- /padding -->
+</div>
+<!-- /main -->
+
+</div>
+</div>
+
+<!--post modal-->
+<div id="postModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        Update Status
+      </div>
+      <div class="modal-body">
+        <form class="form center-block">
+          <div class="form-group">
+            <textarea class="form-control input-lg" autofocus="" placeholder="What do you want to share?"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div>
+          <button class="btn btn-primary btn-sm" data-dismiss="modal" aria-hidden="true">Post</button>
+          <ul class="pull-left list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
