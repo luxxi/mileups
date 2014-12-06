@@ -1,5 +1,5 @@
-<%= @trip.title %>
+<h1><%= @trip.title %></h1>
 
 <% @trip.photos.each do |photo| %>
-    <%= image_tag photo.image, :style => "height:200px;" if photo.image? %>
+    <div class="item one"><%= image_tag photo.image, :style => 'height:200px;' if photo.image? %></div>
 <% end %>
