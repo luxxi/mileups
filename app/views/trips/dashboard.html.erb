@@ -1,5 +1,12 @@
 <% @trips.each do |trip| %>
+<<<<<<< HEAD
+    <%= link_to trip.title, trip_path(trip) %><br>
+<% end %>
+
+<%= link_to 'New trip', new_trip_path %>
+=======
     <%= link_to trip.title, trip_path(current_user, trip) %><br>
 <% end %>
 
 <%= link_to 'New trip', trip_new_path(current_user) %>
+>>>>>>> master

@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+.jumbotron {
+	width: 90%;
+}
+
+.main {
+	.album-preview {
+		margin-bottom: 10px;
+	}
+
+	.crop {
+
+		// not first image (not the big one)
+		overflow: hidden;
+		width: 49%;
+		height: 75px;
+		float: left;
+
+		// the first image (the big one)
+		&:first-of-type {
+			width: 100%;
+			height: auto;
+			margin-bottom: 4px;
+		}
+
+		&:last-of-type {
+			margin-left: 2%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.previewImageBig {
+		width: 100%;
+	}
+
+	.previewImageSmall {
+		width: 49%;
+		float: left;
+	}
+}

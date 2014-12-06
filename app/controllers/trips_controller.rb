@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+
   before_action :authenticate_user!, except: :show
 
   def dashboard
@@ -47,4 +48,3 @@ class TripsController < ApplicationController
   end
 
 end
-
