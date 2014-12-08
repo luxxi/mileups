@@ -18,3 +18,10 @@ jQuery ->
         progress = parseInt(data.loaded / data.total * 100, 10)
         console.log(data.loaded, data.total)
         data.context.find('.bar').css('width', progress + '%')
+
+  completer = new GmapsCompleter
+        inputField: '#gmaps-input-address'
+        errorField: '#gmaps-error'
+
+  completer.autoCompleteInit
+        country: "us"

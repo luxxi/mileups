@@ -35,11 +35,11 @@ class TripsController < ApplicationController
 
   private
   def trip_params
-    params.require(:trip).permit(:title, :user_id, :photos_attributes => [:trip_id, :image])
+    params.require(:trip).permit(:title, :user_id, :address, :photos_attributes => [:trip_id, :image])
   end
 
   def photo_params
-    params.require(:photo).permit(:image, :trip_id)
+    params.require(:photo).permit(:image, :trip_id, :address)
   end
 
   def display_layout
