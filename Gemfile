@@ -28,6 +28,9 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'jquery-fileupload-rails'
 
+gem 'jquery-ui-rails'
+gem 'gmaps-autocomplete-rails'
+
 gem 'turbolinks'
 
 gem 'jbuilder', '~> 2.0'
