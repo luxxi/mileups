@@ -1,3 +1,8 @@
 <div class="photo">
   <%= image_tag photo.image, :style => "height:200px;" if photo.image? %>
+  <%= form_for photo, :url => photo_location_path(current_user, photo) do |f| %>
+      <div class="field">
+        <%= f.text_field :address, :id => 'gmaps-input-address', :placeholder => 'Start typing a place...' %>
+      </div>
+  <% end %>
 </div>

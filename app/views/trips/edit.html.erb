@@ -2,12 +2,16 @@
 
 <div id="photos"></div>
 
-
-
 <%= form_for Photo.new, :url => trip_upload_photos_path(current_user, @trip), :html => {:multipart => true}, id: 'new_photo' do |f| %>
-    <%= f.file_field :image, multiple: true, name: 'photo[image]' %>
+    <div class="field">
+      <%= f.file_field :image, multiple: true, name: 'photo[image]' %>
+    </div>
 <% end %>
 
+
+<div id='gmaps-error'></div>
+
+<div id='gmaps-canvas'></div>
 
 <%= link_to 'Done', dashboard_path %>
 

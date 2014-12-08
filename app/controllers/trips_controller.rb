@@ -28,6 +28,14 @@ class TripsController < ApplicationController
     @photo = @trip.photos.create(photo_params)
   end
 
+  #add location to photo
+  def update
+    @photo = Photo.find(params[:format])
+    @photo.update(photo_params)
+    #@trip = @photo.trip
+    redirect_to :back
+  end
+
   def show
     @trip = Trip.find_by_param(params[:id])
     render layout: display_layout
