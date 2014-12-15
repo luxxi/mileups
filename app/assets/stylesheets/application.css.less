@@ -17,17 +17,17 @@
 html, body {
     height: 100%;
     font-family:verdana,arial,sans-serif;
-    color:#555555;
+    /*color:#555555;*/
 }
 
 .nav {
     font-family:Arial,sans-serif;
     font-size:13px;
 }
-
+/*
 a {
     color:#222222;
-}
+}*/
 
 a:hover {
     text-decoration:none;
@@ -86,6 +86,7 @@ hr {
     width:70px;
 }
 
+/*
 #sidebar {
     padding:0px;
     padding-top:15px;
@@ -107,7 +108,8 @@ hr {
     position:absolute;
     bottom:5px;
     padding:5px;
-}
+}*/
+
 #footer {
     margin-bottom:20px;
 }
@@ -127,8 +129,38 @@ h1,h2,h3 {
 
 .btn-primary,.label-primary,.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus  {
     background-color:#FF8C00;
+    border-color: #3071a9; /*ne rabm cprou nve, zkaj ne*/
     color:#fffffe;
+    font-weight: bold;
 }
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #ffffff;
+  background-color: #3071a9;
+  border-color: #285e8e;
+}
+
+#regBtn {
+  margin: 10px auto;
+}
+
+/* Exceptional styling for the button in the header */
+.navbar-default .btn-primary  {
+  background-color:#bbbbbb;
+  border-color: #777777; /*??*/
+}
+.navbar-default .btn-primary:hover,
+.navbar-default .btn-primary:focus {
+  background-color:#777777;/*#3071a9;*/
+  border-color: #6f645c;
+}
+
+/*
 .btn-default {
     color:#666666;
     text-shadow:0 0 1px rgba(0,0,0,.3);
@@ -136,7 +168,7 @@ h1,h2,h3 {
 .form-control {
 
 }
-
+*/
 .panel textarea, .well textarea, textarea.form-control
 {
     resize: none;
@@ -146,9 +178,11 @@ h1,h2,h3 {
 .jumbotron {
     background-color:transparent;
 }
+/*
 .label-default {
     background-color:#dddddd;
 }
+*/
 .page-header {
     margin-top: 55px;
     padding-top: 9px;
@@ -157,11 +191,11 @@ h1,h2,h3 {
     text-transform:uppercase;
     letter-spacing:2px;
 }
-
+/*
 .panel-default .panel-heading {
     background-color:#f9fafb;
     color:#555555;
-}
+}*/
 
 .col-sm-9.full {
     width: 100%;
@@ -204,13 +238,6 @@ small.text-muted {
         padding-top:20px;
     }
 
-    .navbar-blue {
-        background-color:#FF8C00;
-        top:0;
-        width:100%;
-        position:relative;
-    }
-
 }
 
 
@@ -218,6 +245,7 @@ small.text-muted {
  * off canvas sidebar
  * --------------------------------------------------
  */
+/*
 @media screen and (max-width: 768px) {
     .row-offcanvas {
         position: relative;
@@ -242,7 +270,7 @@ small.text-muted {
         padding-left:3px;
     }
 }
-
+*/
 #carousel-example-generic {
     /*height: 100px;*/
 }
@@ -271,10 +299,10 @@ small.text-muted {
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #3071a9;;
-  background-color: transparent;
+  color: #777777;
 }
 
+/*
 .navbar-default .navbar-text {
   color: #c5c5c5;
 }
@@ -295,29 +323,26 @@ small.text-muted {
   color: #555555;
   background-color: #000005;
 }
-
-
+*/
 .navbar {
   margin-bottom: 0px;
 }
 
 /* Logo. */
 .navbar-default .navbar-brand {
-  color: #b2b2b2;
   display:block;
   padding:3px;
-  /*background-color: #6d3900;*/
   color: #ffffff;
-  height:28px;
-  width:110px;
-  margin:9px;
+  height:auto;
+  margin:6px;
   margin-right:2px;
   margin-left:15px;
-  font-size:23px;
+  font-size:28px;
   font-weight:700;
   text-align:center;
   text-decoration:none;
   text-shadow:0 0 1px;
+  line-height: initial;
   border-radius:2px;
 }
 
@@ -325,6 +350,7 @@ small.text-muted {
   color:#c98620;
   background-color:#fff;
 }
+
 .badge:hover, .badge-inverse{
   background-color:#ecbc00;
   color:#fff;

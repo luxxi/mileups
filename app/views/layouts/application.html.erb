@@ -12,7 +12,7 @@
 <body>
 
 <header>
-    <%= nav_bar :brand => "LineUps", id: "logo" , class: "navbar navbar-default" do %>
+    <%= nav_bar :brand => "mileUps", id: "logo" , class: "navbar navbar-default" do %>
         <% if user_signed_in? %>
 
           <ul class="nav navbar-nav navbar-left">
@@ -46,6 +46,12 @@
           </li>
           </ul>
         <% else %>
+
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Email">
+                <input type="text" class="form-control" placeholder="Password">
+                <%= link_to 'Login', new_user_session_path, :class => 'btn btn-primary'  %>
+            </form>
 
         <% end %>
     <% end %>

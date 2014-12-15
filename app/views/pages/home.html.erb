@@ -52,6 +52,23 @@
       <!-- main col left -->
       <div class="col-sm-5">
 
+        <div class="well">
+
+          <% if !user_signed_in?%>
+              <h2>Sign up</h2>
+              <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :class => 'form-horizontal') do |f| %>
+                  <%= devise_error_messages! %>
+
+                  <div class="controls form-inline">
+                    <%= f.email_field :email, :placeholder => 'Email', :class => 'form-control' %>
+                    <%= f.password_field :password, :placeholder => 'Password', :class => 'form-control' %>
+                    <%= f.submit "Register", :class => 'btn btn-primary', :id => 'regBtn' %>
+                  </div>
+              <% end %>
+          <% end %>
+
+        </div>
+
         <div class="panel panel-default">
           <div class="panel-thumbnail"><img src="http://as1.wdpromedia.com/media/abd/north-america/alaska-vacations/denali-national-park.jpg" class="img-responsive"></div>
           <div class="panel-body">
@@ -85,39 +102,10 @@
           </div>
         </div>
 
-        <div class="panel panel-default">
-          <div class="panel-heading"><h4>How to get involved?</h4></div>
-          <div class="panel-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum odio odio, ut convallis tellus aliquam quis. Quisque tempus, ex ac tristique interdum, leo metus egestas sem, ut varius nisi dui iaculis tortor. Sed erat arcu, pretium at dignissim quis, aliquet a dui. Nulla et elit fermentum, pellentesque massa ut, ultrices lacus. Nullam maximus lorem sit amet lectus sollicitudin, eget tincidunt dolor rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ac placerat quam, quis sagittis diam. Aenean facilisis rutrum ex, ac scelerisque leo elementum sed. Sed blandit id diam at efficitur.
-          </div>
-        </div>
-
       </div>
 
       <!-- main col right -->
       <div class="col-sm-7">
-
-        <div class="well">
-
-          <% if !user_signed_in?%>
-              <h2>Sign up</h2>
-              <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-                  <%= devise_error_messages! %>
-
-                  <div><%= f.label :email %><br />
-                    <%= f.email_field :email %></div>
-
-                  <div><%= f.label :password %><br />
-                    <%= f.password_field :password %></div>
-
-
-                  <div><%= f.submit "Sign up" %></div>
-              <% end %>
-
-              <%= link_to 'Login', new_user_session_path, :class => 'navbar-link'  %>
-          <% end %>
-
-        </div>
 
         <div class="panel panel-default">
           <div class="panel-heading"><a href="#" class="pull-right">Learn more</a> <h4>What's it all about?</h4></div>
@@ -140,6 +128,13 @@
               <img src="http://as1.wdpromedia.com/media/abd/north-america/alaska-vacations/denali-national-park.jpg" width="28px" height="28px">
               <img src="http://as1.wdpromedia.com/media/abd/north-america/alaska-vacations/denali-national-park.jpg" width="28px" height="28px">
             </p>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4>How to get involved?</h4></div>
+          <div class="panel-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum odio odio, ut convallis tellus aliquam quis. Quisque tempus, ex ac tristique interdum, leo metus egestas sem, ut varius nisi dui iaculis tortor. Sed erat arcu, pretium at dignissim quis, aliquet a dui. Nulla et elit fermentum, pellentesque massa ut, ultrices lacus. Nullam maximus lorem sit amet lectus sollicitudin, eget tincidunt dolor rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ac placerat quam, quis sagittis diam. Aenean facilisis rutrum ex, ac scelerisque leo elementum sed. Sed blandit id diam at efficitur.
           </div>
         </div>
 
