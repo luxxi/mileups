@@ -1,6 +1,3 @@
-<% @trips.each do |trip| %>
-    <%= link_to trip.title, trip_path(current_user, trip) %><br>
-<% end %>
 <div class="jumbotron">
   <h2>Welcome home, <%= current_user.username %>!</h2>
 
@@ -8,36 +5,14 @@
     <div class="col-md-9 main">
       <h3>Your albums</h3>
       <div class="row">
-        <div class="album-preview col-md-4">
-          <h4>Tokyo 2014</h4>
-          <div class="crop"><%= image_tag("japan1.jpg", class: "previewImageBig") %></div>
-          <div class="crop"><%= image_tag("japan5.jpg", class: "previewImageSmall") %></div>
-          <div class="crop"><%= image_tag("japan3.jpg", class: "previewImageSmall") %></div>
-        </div>
-        <div class="album-preview col-md-4">
-          <h4>Brussels in november</h4>
-          <div class="crop"><%= image_tag("belgium1.jpg", class: "previewImageBig") %></div>
-          <div class="crop"><%= image_tag("belgium2.jpg", class: "previewImageSmall") %></div>
-          <div class="crop"><%= image_tag("belgium3.jpg", class: "previewImageSmall") %></div>
-        </div>
-        <div class="album-preview col-md-4">
-          <h4>Food markets of Barcelona</h4>
-          <div class="crop"><%= image_tag("barcelona1.jpg", class: "previewImageBig") %></div>
-          <div class="crop"><%= image_tag("barcelona2.jpg", class: "previewImageSmall") %></div>
-          <div class="crop"><%= image_tag("barcelona3.jpg", class: "previewImageSmall") %></div>
-        </div>
-        <div class="album-preview col-md-4">
-          <h4>Annecy, France</h4>
-          <div class="crop"><%= image_tag("annecy1.jpg", class: "previewImageBig") %></div>
-          <div class="crop"><%= image_tag("annecy2.jpg", class: "previewImageSmall") %></div>
-          <div class="crop"><%= image_tag("annecy3.jpg", class: "previewImageSmall") %></div>
-        </div>
-        <div class="album-preview col-md-4">
-          <h4>Beautiful Sintra</h4>
-          <div class="crop"><%= image_tag("portugal1.jpg", class: "previewImageBig") %></div>
-          <div class="crop"><%= image_tag("portugal2.jpg", class: "previewImageSmall") %></div>
-          <div class="crop"><%= image_tag("portugal3.jpg", class: "previewImageSmall") %></div>
-        </div>
+        <% @trips.each do |trip| %>
+            <div class="album-preview col-md-4">
+              <h4><%= link_to trip.title, trip_path(current_user, trip) %></h4>
+              <% trip.photos.take(3).each do |photo| %>
+                  <div class="crop"><%= image_tag photo.image, class: "previewImageSmall" %></div>
+              <% end %>
+            </div>
+        <% end %>
       </div>
     </div>
     <div class="col-md-3 side">
