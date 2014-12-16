@@ -9,7 +9,7 @@
             <div class="album-preview col-md-4">
               <h4><%= link_to trip.title, trip_path(current_user, trip) %></h4>
               <% trip.photos.take(3).each do |photo| %>
-                  <div class="crop"><%= image_tag photo.image, class: "previewImageSmall" %></div>
+                  <div class="crop"><%= image_tag photo.image, class: "previewImageSmall" if photo.image? %></div>
               <% end %>
             </div>
         <% end %>
