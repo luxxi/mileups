@@ -29,6 +29,14 @@ class TripsController < ApplicationController
     @photo = @trip.photos.create(photo_params)
   end
 
+  #add location to photo
+  def update
+    @photo = Photo.find(params[:format])
+    @photo.update(photo_params)
+    #@trip = @photo.trip
+    redirect_to :back
+  end
+
   def show
     @trip = Trip.find_by_param(params[:id])
     render layout: display_layout
@@ -36,11 +44,11 @@ class TripsController < ApplicationController
 
   private
   def trip_params
-    params.require(:trip).permit(:title, :user_id, :photos_attributes => [:trip_id, :image])
+    params.require(:trip).permit(:title, :user_id, :address, :photos_attributes => [:trip_id, :image])
   end
 
   def photo_params
-    params.require(:photo).permit(:image, :trip_id)
+    params.require(:photo).permit(:image, :trip_id, :address)
   end
 
   def display_layout

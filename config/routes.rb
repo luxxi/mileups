@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'trips#dashboard'
   post ':user_id/trip', to: 'trips#upload_photos', as: :trip_upload_photos
+  post ':user_id/photo', to: 'trips#photo_location', as: :photo_location
   get ':user_id/new_trip', to: 'trips#new', as: :trip_new
   post ':user_id/new_trip', to: 'trips#create', as: :trip_create
   get ':user_id/:id', to: 'trips#show', as: :trip

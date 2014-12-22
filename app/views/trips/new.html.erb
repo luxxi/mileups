@@ -16,8 +16,20 @@
       <%= f.text_field :title %>
     </div>
 
+    <div class="field">
+      <%= f.text_field :address, :id => 'gmaps-input-address', :placeholder => 'Start typing a place...' %>
+    </div>
+
+
+      Latitude: <span id='gmaps-output-latitude'></span>
+      <br/>
+      Longitude: <span id='gmaps-output-longitude'></span>
+      <br/>
+    <div id='gmaps-error'></div>
+
+    <div id='gmaps-canvas'></div>
+
     <div class="actions">
       <%= f.submit %>
     </div>
 <% end %>
-
