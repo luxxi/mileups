@@ -16,25 +16,21 @@
 
 html, body {
     height: 100%;
-    font-family:verdana,arial,sans-serif;
-    /*color:#555555;*/
+    font-family: verdana,arial,sans-serif;
+    /*color: #;*/
 }
 
-.nav {
-    font-family:Arial,sans-serif;
-    font-size:13px;
-}
 /*
 a {
-    color:#222222;
+    color: #;
 }*/
 
 a:hover {
-    text-decoration:none;
+    text-decoration: none;
 }
 
 hr {
-    border-color:#dedede;
+    border-color: #dedede;
 }
 
 .wrapper {
@@ -43,8 +39,8 @@ hr {
 
 .wrapper, .row {
     height: 100%;
-    margin-left:0;
-    margin-right:0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .wrapper:before, .wrapper:after,
@@ -60,7 +56,7 @@ hr {
 
 .column {
     height: 100%;
-    *zoom:1;
+    *zoom: 1;
 }
 
 .column .padding {
@@ -68,70 +64,226 @@ hr {
 }
 
 .full {
-    padding-top:30px;
+    padding-top: 30px;
 }
 
 .divider {
-    margin-top:32px;
+    margin-top: 32px;
 }
 
 #main {
-    background-color:#e9eaed;
-    padding-left:0;
-    padding-right:0;
+    background-color: #e9eaed;
+    padding-left: 0;
+    padding-right: 0;
 }
+
 #main .img-circle {
-    margin-top:18px;
-    height:70px;
-    width:70px;
+    margin-top: 18px;
+    height: 70px;
+    width: 70px;
+}
+
+#footer {
+    margin-bottom: 20px;
+}
+
+h1,h2,h3 {
+    font-weight: 800;
+}
+
+.panel textarea, .well textarea, textarea.form-control
+{
+    resize: none;
 }
 
 /*
-#sidebar {
-    padding:0px;
-    padding-top:15px;
+.label-default {
+    background-color: #;
 }
+*/
 
-#sidebar, #sidebar a, #sidebar-footer a {
-    color:#ffffff;
-    background-color:transparent;
-    text-shadow:0 0 2px #000000;
-    padding-left:5px;
+.page-header {
+    margin-top: 55px;
+    padding-top: 9px;
+    border-top: 1px solid #eeeeee;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
-#sidebar .nav li>a:hover {
-    background-color:#393939;
-}
-
-
-#sidebar-footer {
-    background-color:#444;
-    position:absolute;
-    bottom:5px;
-    padding:5px;
+/*
+.panel-default .panel-heading {
+    background-color: #;
+    color: #;
 }*/
 
-#footer {
-    margin-bottom:20px;
+.col-sm-9.full {
+    width: 100%;
 }
 
-
-h1,h2,h3 {
-    font-weight:800;
+/* Post modal */
+.modal-header, .modal-footer {
+    background-color: #f2f2f2;
+    font-weight: 800;
+    font-size: 12px;
 }
 
-.navbar-toggle, .close {
-    outline:0;
+.modal-footer i, .well i {
+    font-size: 20px;
+    color: #c0c0c0;
 }
 
-.navbar-toggle .icon-bar {
-    background-color: #fff;
+.modal-body {
+    padding: 0px;
+}
+
+.modal-body textarea.form-control
+{
+    resize: none;
+    border: 0;
+    box-shadow: 0 0 0;
+}
+/**/
+
+small.text-muted {
+    font-family: courier,courier-new,monospace;
+}
+
+/* adjust the contents on smaller devices */
+@media (max-width: 768px) {
+
+    .column .padding {
+        padding: 7px;
+    }
+
+    .full{
+        padding-top: 20px;
+    }
+}
+/**/
+
+/* Navigation bar */
+.navbar-default {
+  font-size: 16px;
+  margin-bottom:  0px;
+  color:  #777777;
+  background-color:  #FF8C00;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #777777;
+}
+
+/*
+.navbar-default .navbar-text {
+  color: #;
+}
+*/
+/**/
+
+/* Image carrousel */
+#carousel-example-generic {
+  /*height: 100px;*/
+}
+
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}
+/**/
+
+/* Premium badge & glyphicon */
+.glyphicon, .badge {
+  line-height: initial;
+}
+
+.badge {
+  font-size: 14px;
+  color: #c98620;
+  background-color: #fff;
+}
+
+.badge:hover, .badge-inverse{
+  background-color: #ecbc00;
+  color: #fff;
+}
+/**/
+
+/* Accaunt editition on top right corner */
+.navbar-default .navbar-nav > li > a {
+  color: #777777; /* same as bootstrap default */
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #333333;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+/*
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #;
+  background-color: #;
+}
+*/
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #333333;
+  background-color: #bbbbbb;
+}
+/**/
+
+/* Right part of navigation bar. */
+.navbar-nav > li > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.navbar-nav > li {
+  padding-top: 14px;
+  padding-bottom:  14px;
+}
+/**/
+
+/* Logo. */
+.navbar-default .navbar-brand {
+  display: block;
+  padding: 3px;
+  color: #ffffff;
+  height: auto;
+  margin: 6px;
+  margin-right: 2px;
+  margin-left: 15px;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 1px;
+  line-height: initial;
+  border-radius: 2px;
+}
+/**/
+
+/* Buttons */
+.btn-default {
+  color: #777777;
 }
 
 .btn-primary,.label-primary,.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus  {
-    background-color:#FF8C00;
-    border-color: #3071a9; /*ne rabm cprou nve, zkaj ne*/
-    color:#fffffe;
-    font-weight: bold;
+  background-color: #FF8C00;
+  border-color: #3071a9; /* actually works without this */
+  color: #fffffe;
+  font-weight: bold;
 }
 
 .btn-primary:hover,
@@ -148,210 +300,17 @@ h1,h2,h3 {
 #regBtn {
   margin: 10px auto;
 }
+/**/
 
-/* Exceptional styling for the button in the header */
+/* Exceptional styling for the buttons in the header */
 .navbar-default .btn-primary  {
-  background-color:#bbbbbb;
+  background-color: #bbbbbb;
   border-color: #777777; /*??*/
 }
+
 .navbar-default .btn-primary:hover,
 .navbar-default .btn-primary:focus {
-  background-color:#777777;/*#3071a9;*/
+  background-color: #777777;/*#3071a9;*/
   border-color: #6f645c;
 }
-
-/*
-.btn-default {
-    color:#666666;
-    text-shadow:0 0 1px rgba(0,0,0,.3);
-}
-.form-control {
-
-}
-*/
-.panel textarea, .well textarea, textarea.form-control
-{
-    resize: none;
-}
-
-
-.jumbotron {
-    background-color:transparent;
-}
-/*
-.label-default {
-    background-color:#dddddd;
-}
-*/
-.page-header {
-    margin-top: 55px;
-    padding-top: 9px;
-    border-top:1px solid #eeeeee;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:2px;
-}
-/*
-.panel-default .panel-heading {
-    background-color:#f9fafb;
-    color:#555555;
-}*/
-
-.col-sm-9.full {
-    width: 100%;
-}
-
-.modal-header, .modal-footer {
-    background-color:#f2f2f2;
-    font-weight:800;
-    font-size:12px;
-}
-
-.modal-footer i, .well i {
-    font-size:20px;
-    color:#c0c0c0;
-}
-
-.modal-body {
-    padding:0px;
-}
-
-.modal-body textarea.form-control
-{
-    resize: none;
-    border:0;
-    box-shadow:0 0 0;
-}
-
-small.text-muted {
-    font-family:courier,courier-new,monospace;
-}
-
-/* adjust the contents on smaller devices */
-@media (max-width: 768px) {
-
-    .column .padding {
-        padding: 7px;
-    }
-
-    .full{
-        padding-top:20px;
-    }
-
-}
-
-
-/*
- * off canvas sidebar
- * --------------------------------------------------
- */
-/*
-@media screen and (max-width: 768px) {
-    .row-offcanvas {
-        position: relative;
-        -webkit-transition: all 0.25s ease-out;
-        -moz-transition: all 0.25s ease-out;
-        transition: all 0.25s ease-out;
-    }
-
-    .row-offcanvas-left.active {
-        left: 33%;
-    }
-
-    .row-offcanvas-left.active .sidebar-offcanvas {
-        left: -33%;
-        position: absolute;
-        top: 0;
-        width: 33%;
-        margin-left: 5px;
-    }
-
-    #sidebar, #sidebar a, #sidebar-footer a {
-        padding-left:3px;
-    }
-}
-*/
-#carousel-example-generic {
-    /*height: 100px;*/
-}
-
-.carousel-inner > .item > img {
-    margin: 0 auto;
-}
-
-/* Navigation bar. */
-
-/*Get rid of bootstraps padding...*/
-.navbar-nav > li > a {
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-/*... so the list items can have same padding, no matter if it's a link or just a text*/
-.navbar-nav > li {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-/* Override bootstrapes colors */
-.navbar-default {
-  background-color: #FF8C00;
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: #777777;
-}
-
-/*
-.navbar-default .navbar-text {
-  color: #c5c5c5;
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: #333333;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #ffffff;
-  background-color: transparent;
-}
-
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
-  background-color: #000005;
-}
-*/
-.navbar {
-  margin-bottom: 0px;
-}
-
-/* Logo. */
-.navbar-default .navbar-brand {
-  display:block;
-  padding:3px;
-  color: #ffffff;
-  height:auto;
-  margin:6px;
-  margin-right:2px;
-  margin-left:15px;
-  font-size:28px;
-  font-weight:700;
-  text-align:center;
-  text-decoration:none;
-  text-shadow:0 0 1px;
-  line-height: initial;
-  border-radius:2px;
-}
-
-.badge{
-  color:#c98620;
-  background-color:#fff;
-}
-
-.badge:hover, .badge-inverse{
-  background-color:#ecbc00;
-  color:#fff;
-}
+/**/
