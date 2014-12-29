@@ -1,7 +1,25 @@
 class RegistrationsController < Devise::RegistrationsController
+  def create
+    @user = User.new(user_params)
+
+    if User.where(email: @user.email).exists?
+      set_flash_message :alert, :exists, :email => @user.email if is_flashing_format?
+      redirect_to root_path
+    else
+      super
+    end
+  end
+
   protected
+
   def after_update_path_for(resource)
     dashboard_path
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:email, :password)
   end
 end
 
