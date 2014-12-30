@@ -53,6 +53,8 @@
 
         <% if !user_signed_in?%>
             <div class="well">
+              <%= render partial: "devise/registrations/create" %>
+<!--
               <h2>Sign up</h2>
               <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :class => 'form-horizontal') do |f| %>
                   <%= devise_error_messages! %>
@@ -63,8 +65,9 @@
                     <%= f.submit "Register", :class => 'btn btn-primary', :id => 'regBtn' %>
                   </div>
               <% end %>
+-->
             </div>
-        <% end %>
+      <% end %>
 
         <div class="panel panel-default">
           <div class="panel-thumbnail"><img src="http://as1.wdpromedia.com/media/abd/north-america/alaska-vacations/denali-national-park.jpg" class="img-responsive"></div>

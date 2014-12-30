@@ -1,7 +1,32 @@
 class RegistrationsController < Devise::RegistrationsController
+  def new
+    @user = User.new
+
+  end
+
   def create
     @user = User.new(user_params)
 
+=begin
+    @validatable = devise_mapping.validatable?
+    if @validatable
+      @minimum_password_length = resource_class.password_length.min
+    end
+
+    validate :password_confirmation_matches_password
+
+    def password_confirmation_matches_password
+      if password != password_confirmation
+        errors.add(:password_confirmation, "isn't the same")
+      end
+    end
+
+
+    #if @user.email.length < @minimum_password_length
+
+    #end
+    #else
+=end
     if User.where(email: @user.email).exists?
       set_flash_message :alert, :exists, :email => @user.email if is_flashing_format?
       redirect_to root_path
