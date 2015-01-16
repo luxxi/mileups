@@ -1,0 +1,21 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'navbar-form navbar-right'}) do |f| %>
+    <table data-toggle="table">
+      <tbody>
+      <tr>
+        <td data-field="id"><%= f.email_field :email, :placeholder => "Email", :autofocus => true %></td>
+        <td data-field="name"><%= f.password_field :password, :placeholder => "Password", :autocomplete => "off" %></td>
+        <td data-field="name"><%= f.submit "Log in" %></td>
+      </tr>
+      <tr>
+        <td data-field="id">
+          <% if devise_mapping.rememberable? -%>
+            <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+          <% end -%>
+        </td>
+        <td data-field="name"><%= link_to "Forgot your password?", new_password_path(resource_name) %></td>
+      </tr>
+      </tbody>
+    </table>
+<% end %>
+
+

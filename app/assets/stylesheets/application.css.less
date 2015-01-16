@@ -14,10 +14,11 @@
  *= require_self
  */
 
+@import 'bootstrap_and_overrides.css.less';
+
 html, body {
-    height: 100%;
-    font-family: verdana,arial,sans-serif;
-    /*color: #;*/
+  height: 100%;
+  font-family: verdana,arial,sans-serif;
 }
 
 /* Get rid of Bootstraps bottom margin (for notification positioning) */
@@ -25,150 +26,131 @@ html, body {
   margin-bottom: 0;
 }
 
-/*
-a {
-    color: #;
-}*/
-
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 hr {
-    border-color: #dedede;
+  border-color: #dedede;
 }
 
 .wrapper {
-    top : 0;
+  top : 0;
 }
 
 .wrapper, .row {
-    height: 100%;
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .wrapper:before, .wrapper:after,
 .column:before, .column:after {
-    content: "";
-    display: table;
+  content: "";
+  display: table;
 }
 
 .wrapper:after,
 .column:after {
-    clear: both;
+  clear: both;
 }
 
 .column {
-    height: 100%;
-    *zoom: 1;
+  height: 100%;
+  *zoom: 1;
 }
 
 .column .padding {
-    padding: 20px;
+  padding: 20px;
 }
 
 .full {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 .divider {
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
 #main {
-    background-color: #e9eaed;
-    padding-left: 0;
-    padding-right: 0;
+  background-color: #e9eaed;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #main .img-circle {
-    margin-top: 18px;
-    height: 70px;
-    width: 70px;
+  margin-top: 18px;
+  height: 70px;
+  width: 70px;
 }
 
 #footer {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 h1,h2,h3 {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .panel textarea, .well textarea, textarea.form-control
 {
-    resize: none;
+  resize: none;
 }
-
-/*
-.label-default {
-    background-color: #;
-}
-*/
 
 .page-header {
-    margin-top: 55px;
-    padding-top: 9px;
-    border-top: 1px solid #eeeeee;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  margin-top: 55px;
+  padding-top: 9px;
+  border-top: 1px solid #eeeeee;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
-/*
-.panel-default .panel-heading {
-    background-color: #;
-    color: #;
-}*/
 
 .col-sm-9.full {
-    width: 100%;
+  width: 100%;
 }
 
 /* Post modal */
 .modal-header, .modal-footer {
-    background-color: #f2f2f2;
-    font-weight: 800;
-    font-size: 12px;
+  background-color: #f2f2f2;
+  font-weight: 800;
+  font-size: 12px;
 }
 
 .modal-footer i, .well i {
-    font-size: 20px;
-    color: #c0c0c0;
+  font-size: 20px;
+  color: #c0c0c0;
 }
 
 .modal-body {
-    padding: 0px;
+  padding: 0px;
 }
 
 .modal-body textarea.form-control
 {
-    resize: none;
-    border: 0;
-    box-shadow: 0 0 0;
+  resize: none;
+  border: 0;
+  box-shadow: 0 0 0;
 }
 /**/
 
 small.text-muted {
-    font-family: courier,courier-new,monospace;
+  font-family: courier,courier-new,monospace;
 }
 
 /* adjust the contents on smaller devices */
-@media (max-width: 768px) {
+@media (max-width: @screen-sm) {
+  .column .padding {
+    padding: 7px;
+  }
 
-    .column .padding {
-        padding: 7px;
-    }
-
-    .full{
-        padding-top: 20px;
-    }
+  .full{
+    padding-top: 20px;
+  }
 }
 /**/
 
 /* Navigation bar */
 .navbar-default {
-  font-size: 16px;
   margin-bottom:  0px;
   color:  #777777;
   background-color:  #FF8C00;
@@ -178,17 +160,11 @@ small.text-muted {
 .navbar-default .navbar-brand:focus {
   color: #777777;
 }
-
-/*
-.navbar-default .navbar-text {
-  color: #;
-}
-*/
 /**/
 
 /* Image carrousel */
 #carousel-example-generic {
-  /*height: 100px;*/
+/*height: 100px;*/
 }
 
 .carousel-inner > .item > img {
@@ -202,9 +178,8 @@ small.text-muted {
 }
 
 .badge {
-  font-size: 14px;
-  color: #c98620;
-  background-color: #fff;
+ color: #c98620;
+ background-color: #fff;
 }
 
 .badge:hover, .badge-inverse{
@@ -231,15 +206,6 @@ small.text-muted {
   color: #ffffff;
 }
 
-/*
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #;
-  background-color: #;
-}
-*/
-
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   text-decoration: none;
@@ -253,69 +219,277 @@ small.text-muted {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-
-.navbar-nav > li {
-  padding-top: 14px;
-  padding-bottom:  14px;
-}
 /**/
+
+@navbarHeight: 60px;
+@navbarBorderRadius: 2px;
 
 /* Logo. */
 .navbar-default .navbar-brand {
+  @navbarFontSize: 30px;
+  @navbarBrandHeight: @input-height-base;
   display: block;
-  padding: 3px;
   color: #ffffff;
-  height: auto;
-  margin: 6px;
+  height: @navbarBrandHeight;
   margin-right: 2px;
-  margin-left: 15px;
-  font-size: 28px;
+  font-size: @navbarFontSize;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
   text-shadow: 0 0 1px;
-  line-height: initial;
-  border-radius: 2px;
+  line-height: 1;
+  border-radius: @navbarBorderRadius;
+  padding: 0;
 }
 /**/
+
+.navbar-default {
+  padding: ((@navbarHeight - @input-height-base - @navbarBorderRadius) / 2) 10px ((@navbarHeight - @input-height-base - @navbarBorderRadius) / 2);
+}
+
+@navbarListHeight: 20px;
+
+.navbar .nav > li {
+  > a, > span {
+    padding: ((@input-height-base - @navbarListHeight) / 2) 0 ((@input-height-base - @navbarListHeight) / 2);
+    display: inline-block;
+  }
+
+  /* Needed because default value adds 1px to the content height */
+  > a {
+    line-height: initial;
+  }
+}
 
 /* Buttons */
-.btn-default {
-  color: #777777;
-}
-
-.btn-primary,.label-primary,.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus  {
+.btn-primary {
+  .btn;
   background-color: #FF8C00;
-  border-color: #3071a9; /* actually works without this */
+  border-color: #3071a9;
   color: #fffffe;
   font-weight: bold;
+
+  &:hover, &:focus, &:active, .open > .dropdown-toggle & {
+    color: #ffffff;
+    background-color: #3071a9;
+    border-color: #285e8e;
+  }
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary.focus,
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-  color: #ffffff;
-  background-color: #3071a9;
-  border-color: #285e8e;
-}
-
-#regBtn {
-  margin: 10px auto;
-}
-/**/
-
-/* Exceptional styling for the buttons in the header */
-.navbar-default .btn-primary  {
+.btn-primary-sec {
+  .btn-primary;
   background-color: #bbbbbb;
-  border-color: #777777; /*??*/
-}
+  border-color: #777777;
 
-.navbar-default .btn-primary:hover,
-.navbar-default .btn-primary:focus {
-  background-color: #777777;/*#3071a9;*/
-  border-color: #6f645c;
+  &:hover, &:focus {
+    background-color: #777777;
+    border-color: #6f645c;
+  }
 }
 /**/
+
+.navbar-form {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+form > table > tbody > tr > td > label {
+  margin-bottom: 0px;
+}
+
+nav .container {
+  > form, > form td, > ul {
+    > button:first-child, > .field_with_errors, & > input:first-child, > label:first-child, span:first-child {
+      margin-right: 10px;
+    }
+  }
+
+  input:not([type=submit]):not([type=button]):not([type=checkbox]) {
+    .form-control;
+    .navbar-form .form-control;
+  }
+
+  input[type=submit], input[type=button], button {
+    .btn-primary-sec;
+  }
+}
+
+.navbar-nav > li > .dropdown-menu {
+  margin-top: (@navbarHeight - @input-height-base) / 2;
+}
+
+.field_with_errors {
+  display: inline;
+}
+
+@media (min-width: @screen-sm) {
+  #animatedBrand {
+    .navbar-brand;
+  }
+}
+
+/* LOGO */
+#animatedBrand{
+  .navbar-default .navbar-brand;
+  text-shadow: none;
+  display:none;
+}
+
+@delayStep: 0.15s;
+
+#animatedBrand > div {
+@animDuration: @delayStep * 7;
+  color:#777777;
+  font-family:Arial;
+  font-size:30px;
+  text-decoration:none;
+  font-weight:bold;
+  font-style:normal;
+  float:left;
+  -moz-animation-name:bounce_animatedBrand;
+  -moz-animation-duration:@animDuration;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-direction:linear;
+  -moz-transform:scale(.5);
+  -webkit-animation-name:bounce_animatedBrand;
+  -webkit-animation-duration:@animDuration;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-direction:linear;
+  -webkit-transform:scale(.5);
+  -ms-animation-name:bounce_animatedBrand;
+  -ms-animation-duration:@animDuration;
+  -ms-animation-iteration-count:infinite;
+  -ms-animation-direction:linear;
+  -ms-transform:scale(.5);
+  -o-animation-name:bounce_animatedBrand;
+  -o-animation-duration:@animDuration;
+  -o-animation-iteration-count:infinite;
+  -o-animation-direction:linear;
+  -o-transform:scale(.5);
+  animation-name:bounce_animatedBrand;
+  animation-duration:@animDuration;
+  animation-iteration-count:infinite;
+  animation-direction:linear;
+  transform:scale(.5);
+}
+
+.charAnim(@charIndex) {
+@delay: @delayStep * @charIndex;
+  -moz-animation-delay:@delay;
+  -webkit-animation-delay:@delay;
+  -ms-animation-delay:@delay;
+  -o-animation-delay:@delay;
+  animation-delay:@delay;
+}
+
+#animatedBrand_1{
+  .charAnim(1);
+}
+
+#animatedBrand_2{
+  .charAnim(2);
+}
+
+#animatedBrand_3{
+  .charAnim(3);
+}
+
+#animatedBrand_4{
+  .charAnim(4);
+}
+
+#animatedBrand_5{
+  .charAnim(5);
+}
+
+#animatedBrand_6{
+  .charAnim(6);
+}
+
+#animatedBrand_7{
+  .charAnim(7);
+}
+
+@-moz-keyframes bounce_animatedBrand{
+  0%{
+  -moz-transform:scale(1);
+  color:#777777;
+  }
+
+  100%{
+  -moz-transform:scale(.5);
+  color:#FF8C00;
+  }
+}
+
+@-webkit-keyframes bounce_animatedBrand{
+  0%{
+  -webkit-transform:scale(1);
+  color:#777777;
+  }
+
+  100%{
+  -webkit-transform:scale(.5);
+  color:#FF8C00;
+  }
+}
+
+@-ms-keyframes bounce_animatedBrand{
+  0%{
+  -ms-transform:scale(1);
+  color:#777777;
+  }
+
+  100%{
+  -ms-transform:scale(.5);
+  color:#FF8C00;
+  }
+}
+
+@-o-keyframes bounce_animatedBrand{
+  0%{
+  -o-transform:scale(1);
+  color:#777777;
+  }
+
+  100%{
+  -o-transform:scale(.5);
+  color:#FF8C00;
+  }
+}
+
+@keyframes bounce_animatedBrand{
+  0%{
+  transform:scale(1);
+  color:#777777;
+  }
+
+  100%{
+  transform:scale(.5);
+  color:#FF8C00;
+  }
+}
+/**/
+
+/* Straight from bootstrap (because it is also needed outside the @media) */
+.navbar-form .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.deviseForm {
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+  input:not([type=submit]):not([type=button]) {
+     .form-control;
+     .navbar-form .form-control;
+     margin-bottom: 10px;
+  }
+
+  input[type=submit], input[type=button] {
+    .btn-primary;
+    margin: 15px auto 10px auto;
+  }
+}
