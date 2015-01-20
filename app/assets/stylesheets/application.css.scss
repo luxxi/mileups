@@ -19,13 +19,40 @@
 	width: 90%;
 }
 
+
+.navbar {
+	min-height: 50px;
+	text-align: right;
+
+	.navbar-brand {
+		font-size: 40px;
+	}
+}
+
 .main {
 	.album-preview {
 		margin-bottom: 10px;
+		box-sizing: border-box;
+
+		&:hover {
+			//border-radius: 0px;
+			background-color: rgba(0, 0, 0, 0.17);
+
+			.share {
+				opacity: 1; 
+			}
+		}
+
+		.share {
+			opacity: 0;
+		}
+
+		h4 {
+			text-transform: capitalize;
+		}
 	}
 
 	.crop {
-
 		// not first image (not the big one)
 		overflow: hidden;
 		width: 49%;
@@ -39,7 +66,7 @@
 			margin-bottom: 4px;
 		}
 
-		&:last-of-type {
+		&:nth-of-type(3) {
 			margin-left: 2%;
 		}
 

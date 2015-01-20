@@ -11,6 +11,7 @@
               <% trip.photos.take(3).each do |photo| %>
                   <div class="crop"><%= image_tag photo.image, class: "previewImageSmall" if photo.image? %></div>
               <% end %>
+              <div class="btn btn-default share"> Share   </div>
             </div>
         <% end %>
       </div>
