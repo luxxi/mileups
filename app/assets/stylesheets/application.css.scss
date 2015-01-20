@@ -27,6 +27,11 @@
 	.navbar-brand {
 		font-size: 40px;
 	}
+
+	span, a:not(.navbar-brand) {
+		margin-top: 11px;
+		display: inline-block;
+	}
 }
 
 .main {

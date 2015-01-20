@@ -2,12 +2,12 @@
   clear: both;
 }
 
-.photo {
-  border: solid 1px #CCC;
+.photo {  
   padding: 10px;
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.25);
 
   .name {
     padding-top: 5px;
@@ -19,6 +19,11 @@
     font-size: 10px;
     text-align: center;
     color: #777;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -79,4 +84,32 @@
 
 .container h1 {
   text-transform: capitalize;
+}
+
+.new_trip {
+  label {
+    width: 100px;
+  }
+
+  .field {
+    margin: 7px 0px;
+  }
+
+  .actions {
+    margin: 10px 0px;
+  }
+}
+
+.new_photo {
+  margin: 10px 0px;
+}
+
+.container .btn.submit {
+  margin: 10px 0px;
+}
+
+.edit_photo {
+  .field {
+    margin: 5px 0px;
+  }
 }
