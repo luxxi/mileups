@@ -39,3 +39,40 @@
     }
   }
 }
+
+#trip {
+  width: 100%;
+
+  .item {
+    display: inline-block;
+    box-sizing: border-box;
+
+    > * {
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &.one {
+      width: 25%;
+      padding: 5px;
+    }
+
+    &.two {
+      width: 50%;
+      padding: 5px;
+    }
+
+    &.three {
+      width: 75%;
+      padding: 5px;
+    }
+
+    &.giant {
+      width: 100%;
+      padding: 5px;
+    }
+  }
+}
