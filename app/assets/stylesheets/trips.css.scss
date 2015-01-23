@@ -2,12 +2,12 @@
   clear: both;
 }
 
-.photo {
-  border: solid 1px #CCC;
+.photo {  
   padding: 10px;
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.25);
 
   .name {
     padding-top: 5px;
@@ -19,6 +19,11 @@
     font-size: 10px;
     text-align: center;
     color: #777;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -37,5 +42,74 @@
       height: 10px;
       background: #3EC144;
     }
+  }
+}
+
+#trip {
+  width: 100%;
+
+  .item {
+    display: inline-block;
+    box-sizing: border-box;
+
+    > * {
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &.one {
+      width: 25%;
+      padding: 5px;
+    }
+
+    &.two {
+      width: 50%;
+      padding: 5px;
+    }
+
+    &.three {
+      width: 75%;
+      padding: 5px;
+    }
+
+    &.giant {
+      width: 100%;
+      padding: 5px;
+    }
+  }
+}
+
+.container h1 {
+  text-transform: capitalize;
+}
+
+.new_trip {
+  label {
+    width: 100px;
+  }
+
+  .field {
+    margin: 7px 0px;
+  }
+
+  .actions {
+    margin: 10px 0px;
+  }
+}
+
+.new_photo {
+  margin: 10px 0px;
+}
+
+.container .btn.submit {
+  margin: 10px 0px;
+}
+
+.edit_photo {
+  .field {
+    margin: 5px 0px;
   }
 }
